@@ -1,0 +1,59 @@
+
+:root{
+    --main-color: #000;
+    --heading1:1.6rem;
+    --heading2:1.4rem;
+    --heading3:1.25rem;
+    --heading4:1rem;
+    --boby:1rem;
+    --boby2:0.9rem;
+    --weight1:700;
+    --weight2:400;
+    --lnh120:1.2;
+    --lnh140:1.4;
+}
+.play{
+      font-family: "Playfair Display", serif;
+}
+h1{
+    font-size: var(--heading1);
+    font-weight: var(--weight1);
+}
+h2{
+    font-size: var(--heading2);
+    font-weight: var(--weight1);
+}
+h3{
+    font-size: var(--heading3);
+    font-weight: var(--weight1);
+}
+h4{
+    font-size: var(--heading4);
+    font-weight: var(--weight1);
+}
+html{
+    font-size: 20px;
+    font-family: 'Pretendard',sans-serif;
+}
+.common-frame{
+    width: auto;
+    margin: 0 3rem;
+}
+@media (max-width:1024px){
+    html{
+    font-size: 18px;
+    }
+    .common-frame{
+    width: auto;
+    margin: 0 2rem;
+}
+}
+@media (max-width:768px){
+    html{
+    font-size: 14px;
+    }
+    .common-frame{
+    width: auto;
+    margin: 0 1rem;
+}
+}

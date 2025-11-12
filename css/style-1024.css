@@ -1,0 +1,94 @@
+@media (max-width: 1024px) {
+  .hero {
+    height: 800px;
+    padding: 0 2rem;
+  }
+
+  .header {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .hero-inner {
+    bottom: 20%;
+  }
+
+  .sub {
+    font-size: 0.9rem;
+  }
+
+  .title {
+    font-size: 7rem;
+  }
+
+  .hero-video {
+    top: 68%;
+    width: 60vw;
+  }
+
+  .hero-info {
+    right: 2rem;
+    bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+   .philosophy {
+    height: auto;
+    padding: 0 2rem;
+  }
+
+  .philo-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  /* ===== 타이틀 영역 ===== */
+  .philo-left {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-left: 3rem;        /* ✅ 왼쪽 여백 확보 */
+  }
+
+  .philo-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  .philo-sub {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  .dot{
+    display: none;
+  }
+
+  /* ===== 본문 영역 ===== */
+  .philo-right {
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 6rem;        /* ✅ 전체 본문 블록 왼쪽으로 기울어진 정렬 */
+  }
+
+  .philo-en {
+    width: 90%;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0 0 3rem 0;
+    color: #c8c8c8;
+    text-align: left;
+  }
+
+  .philo-ko {
+    width: 85%;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.2rem;
+    text-align: left;
+  }
+
+  .koko {
+    margin-bottom: 2rem;
+  }
+}

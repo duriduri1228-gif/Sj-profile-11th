@@ -283,8 +283,8 @@
   }
 
   .skills-title {
-    font-size: 1.9rem;       
-    line-height: 1.2;         
+    font-size: 1.9rem !important;       
+    line-height: 1.2 !important;         
     word-break: keep-all;   
   }
 

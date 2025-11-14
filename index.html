@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/style-1200.css?v=1">
     <link rel="stylesheet" href="./css/style-1024.css?v=1">
     <link rel="stylesheet" href="./css/style-768.css?v=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <script src="./js/hero.js"></script>
     <script src="./js/bbyong.js"></script>
     <script src="./js/bbyong-right.js"></script>
@@ -211,6 +213,114 @@
     </div>
   </div>
 </section>
+
+  <div class="skills-header popuphead">
+  <h2 class="skills-title bbyong-left">POPUPS</h2>
+  <p class="skills-sub bbyong-left">
+    디자인을 벤치마킹한 후 무드에 어울리도록<br>
+    테마에 맞춰서 500x500px의 팝업디자인을 제작했습니다
+  </p>
+<div class="popup-mask">
+  <div class="swiper-button-prev popup-prev"></div>
+<div class="swiper mySwiper bbyong">
+  
+  <div class="swiper-wrapper">
+
+    <div class="swiper-slide">
+      <div class="popup-img">
+        <img src="./img/블랙프라이데이-팝업1.jpg" alt="블랙 프라이데이 팝업디자인"/>
+      </div>
+      <div class="popup-text">
+        <h3>BLACKFRIDAY - 할인행사 이벤트</h3>
+        <p>밝고 경쾌한 캐릭터 연출을 중심으로 제작한 블랙프라이데이 시즌 프로모션 팝업입니다.
+노란 톤의 배경과 귀여운 캐릭터 일러스트를 활용해 가볍고 즐거운 행사 분위기를 표현하고, 주요 할인 정보를 한눈에 보이도록 배치했습니다.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="popup-img">
+        <img src="./img/버거킹-팝업.jpg" alt="버거킹 팝업 디자인" />
+      </div>
+      <div class="popup-text">
+        <h3>BUGERKING - 신제품 홍보</h3>
+        <p>버거킹 신메뉴의 맛과 볼륨감을 시각적으로 강조한 제품 프로모션 팝업입니다.
+재료의 질감이 돋보이도록 클로즈업한 이미지를 사용해 신제품의 매력을 직접적으로 전달하고, 브랜드 컬러에 맞춘 배경으로 통일감을 주었습니다.</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="popup-img">
+        <img src="./img/나이키-팝업.jpg" alt="나이키 팝업 디자인"/>
+      </div>
+      <div class="popup-text">
+        <h3>NIKE - 할인행사 이벤트</h3>
+        <p>나이키의 에어포스 라인에서 느껴지는 시원하고 경쾌한 감성을 강조한 시즌 프로모션 팝업입니다.
+맑은 하늘 배경과 화이트·블루 컬러톤을 활용해 브랜드 무드를 자연스럽게 담았으며, 할인 이벤트 정보를 직관적으로 전달하도록 구성했습니다.</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="popup-img">
+        <img src="./img/크리스마스 팝업2.jpg" alt="크리스마스 팝업 디자인"/>
+      </div>
+      <div class="popup-text">
+        <h3>CHRISTMAS - 할인행사 이벤트</h3>
+        <p>크리스마스 시즌을 상징하는 레드 컬러를 중심으로 구성한 크리스마스 프로모션 팝업입니다.
+선물·트리·스노우맨 등 대표적인 크리스마스 아이콘을 배치해 따뜻한 브랜드 무드를 강조하고, 이벤트 메시지가 눈에 띄도록 레이아웃을 정리했습니다.</p>
+      </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="popup-img">
+        <img src="./img/블랙프라이데이-팝업2.jpg" alt="블랙 프라이데이 팝업 디자인" />
+      </div>
+      <div class="popup-text">
+        <h3>BLACKFRIDAY - 할인행사 이벤트</h3>
+        <p>블랙프라이데이 이벤트의 강렬함을 극대화하기 위해 딥블랙 톤과 메탈릭 텍스처를 활용한 프로모션 팝업입니다.
+심플하지만 묵직한 타이포그래피로 세일 분위기를 강조해 프리미엄한 시즌 무드를 연출했습니다.</p>
+      </div>
+    </div>
+  </div>
+    
+  
+
+  <div class="swiper-pagination"></div>
+</div>
+<div class="swiper-button-next popup-next"></div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+ var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  loop: true,
+  initialSlide: 2,
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  speed: 800,
+  observer: true,
+  observeParents: true,
+
+  coverflowEffect: {
+    rotate: 45,
+    stretch: 30,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+    scale: 0.85
+  },
+  autoplay: {
+  delay: 6000,   
+  disableOnInteraction: false,  
+},
+
+ 
+  navigation: {
+    nextEl: ".popup-next",
+    prevEl: ".popup-prev",
+  },
+});
+  </script>
+</div>
 </div>
 </body>
 </html>

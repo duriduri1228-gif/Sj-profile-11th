@@ -200,6 +200,51 @@
   .skill-card .desc {
     max-width: 100%;
   }
+  .popuphead {
+    padding: 3rem 1rem;
+}
+ .popup-mask .mySwiper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ⭐ 모바일 커버플로우 핵심 */
+  .swiper-slide {
+    width: 75vw !important;    /* 중앙 슬라이드 너비 = 화면폭의 75% */
+    max-width: 360px;          /* 너무 커지지 않도록 상한선 */
+    min-width: 240px;          /* 너무 작아지지 않도록 하한선 */
+    height: auto;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 화살표 축소 */
+  .popup-prev,
+  .popup-next {
+    width: 30px;
+    height: 30px;
+  }
+
+  .popup-prev::after,
+  .popup-next::after {
+    font-size: 12px;
+  }
+
+  .popup-prev { left: 4px; }
+  .popup-next { right: 4px; }
+  .swiper-slide {
+  overflow: visible !important;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  bottom: auto !important;
+  top: 0 !important;
+  height: 74% !important; /* 원하는 만큼만 그림자 보이게 */
+}
 }
 
 
@@ -247,4 +292,21 @@
     font-size: 0.9rem;
     margin-top: 0.2rem;
   }
+  .swiper-slide {
+    width: 70vw !important;       /* 전체 비율 조금 더 줄임 */
+    max-width: 260px;             /* 강제 상한 축소 */
+    min-width: 180px;             /* 최소폭 낮춰서 작아지게 */
+  }
+
+  .popup-prev,
+  .popup-next {
+    width: 26px;
+    height: 26px;
+  }
+
+  .popup-prev::after,
+  .popup-next::after {
+    font-size: 10px;
+  }
+  
 }

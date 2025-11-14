@@ -129,6 +129,14 @@
   font-family: "Satoshi", sans-serif;
   
 }
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px !important;
+  height: auto;
+  overflow: visible;
+}
+
 }
 @media (max-width: 900px) {
   .about{
@@ -266,5 +274,12 @@
   .about {
   padding: 6rem 2rem !important;
 
+}
+.popuphead {
+    padding: 3rem 2rem;
+}
+.popup-prev,
+.popup-next {
+  display: none !important;
 }
 }

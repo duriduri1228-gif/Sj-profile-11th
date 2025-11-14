@@ -1,7 +1,7 @@
 html, body {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden; /* ✅ 가로 스크롤 완전 차단 */
+  overflow-x: hidden;
 }
 .hero {
   height: 960px;
@@ -15,7 +15,7 @@ html, body {
   padding: 0 3rem;
 }
 
-/* 로고 */
+
 .header {
   position: absolute;
   top: 2rem;
@@ -28,11 +28,11 @@ html, body {
   height: auto;
 }
 
-/* 중앙 텍스트 */
+
 .hero-inner {
-  position: relative;   /* ✅ z-index가 적용되게 만듦 */
+  position: relative;   
   z-index: 3;
-  bottom: 25%;           /* ✅ 영상보다 위로 */
+  bottom: 25%;          
 }
 
 .sub {
@@ -46,10 +46,10 @@ html, body {
   font-size: 8rem;
   line-height: 1.05;
   font-weight: 800;
-  color: #000;          /* ✅ 혹시 투명도 섞여있을 대비 */
+  color: #000;         
 }
 
-/* 영상 */
+
 .hero-video {
   position: absolute;
   top: 70%;
@@ -62,13 +62,13 @@ html, body {
   z-index: 1;
   pointer-events: none;
 
-  /* 🔹 초기 상태 (처음부터 흐리게 + 어둡게 렌더링) */
+ 
   filter: blur(25px);
   opacity: 0.3;
   transition: filter 2s ease, opacity 2s ease;
 }
 
-/* 우하단 정보 */
+
 .hero-info {
   position: absolute;
   right: 3rem;
@@ -77,7 +77,7 @@ html, body {
   font-size: 1rem;
   font-weight: 600;
   color: #111;
-  z-index: 4;           /* ✅ 텍스트보다 위쪽 계층 */
+  z-index: 4;         
 }
 .title span span {
   display: inline-block;
@@ -101,7 +101,7 @@ html, body {
 .philo-left{
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;   /* ✅ 수평 정렬 시 높이 자연스럽게 맞춤 */
+  align-items: flex-end; 
   flex-wrap: wrap;     
   margin-bottom: 6rem;
   margin-top: 3rem;
@@ -111,7 +111,6 @@ html, body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* max-width: 1600px; */
 }
 
 .philo-title {
@@ -132,7 +131,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* gap: 2.5rem; */
+ 
   
 }
 
@@ -141,7 +140,7 @@ html, body {
   font-size: 2rem;
   line-height: 1.2;
   color: #C8C8C8;
-   margin-left: auto;      /* ✅ 부모의 오른쪽으로 붙음 */
+   margin-left: auto;    
   margin-bottom: 6rem; 
   
 }
@@ -153,7 +152,7 @@ html, body {
   word-break: keep-all;
   font-weight: 400;
   width: 500px;
-     margin-left: auto;      /* ✅ 부모의 오른쪽으로 붙음 */
+     margin-left: auto;     
   margin-right: 12rem; 
   margin-bottom: 1rem;
 }
@@ -173,25 +172,25 @@ html, body {
 }
 .bbyong-right {
   opacity: 0;
-  transform: translateX(80px); /* 오른쪽에서 시작 */
+  transform: translateX(80px); 
   transition: all 0.8s ease-out;
   will-change: opacity, transform;
 }
 
 .bbyong-right.show {
   opacity: 1;
-  transform: translateX(0); /* 제자리로 이동 */
+  transform: translateX(0); 
 }
 .bbyong-left {
   opacity: 0;
-  transform: translateX(-80px); /* ✅ 왼쪽에서 시작 */
+  transform: translateX(-80px); 
   transition: all 0.8s ease-out;
   will-change: opacity, transform;
 }
 
 .bbyong-left.show {
   opacity: 1;
-  transform: translateX(0); /* ✅ 제자리로 이동 */
+  transform: translateX(0);
 }
 .fade-text {
   display: inline-block;
@@ -216,14 +215,13 @@ html, body {
 
 .about-inner {
   width: 100%;
-  /* max-width: 1600px; */
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 0 6rem;
 }
 
-/* ===== LEFT ===== */
+
 
 .about-left {
   display: flex;
@@ -267,7 +265,7 @@ html, body {
   color: #bbbbbb;
 }
 
-/* ===== RIGHT ===== */
+
 
 
 .about-list {
@@ -318,7 +316,7 @@ html, body {
   gap: 2rem;
 }
 
-/* 프로필 정보 박스 */
+
 .profile-info {
   display: flex;
   flex-direction: column;
@@ -333,19 +331,19 @@ html, body {
   font-size: 0.85rem;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;  /* 🔥 EDUCATION처럼 긴 내용이 있을 때 줄바꿈 자연스럽게 */
+  flex-wrap: wrap;  
 }
 
 .profile-info span {
-  width: 5.5rem;     /* 🔥 EDUCATION 항목 길이에 맞춰서 더 넓힘 */
+  width: 5.5rem;    
   font-weight: 600;
   color: #d0d0d0;
-  flex-shrink: 0;    /* 🔥 줄어들지 않게 고정 */
+  flex-shrink: 0;    
 }
 
 .profile-info p {
   color: #fff;
-  flex: 1;           /* 🔥 길게 늘어나는 내용도 자연스럽게 오른쪽으로 흐름 */
+  flex: 1;           
   line-height: 1.5;
 }
 
@@ -359,7 +357,6 @@ html, body {
 .skills-header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 6rem;
 }
 
 .skills-title {
@@ -374,16 +371,18 @@ html, body {
   color: #111;
   font-weight: 400;
   margin-top: 0.8rem;
+  line-height: 1.4;
 }
 
-/* GRID */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 4rem 4rem;
+  padding-top: 3rem;
 }
 
-/* CARD */
+
 .skill-card {
   display: flex;
   flex-direction: column;
@@ -405,7 +404,7 @@ html, body {
   font-weight: 500;
   margin-bottom: 1rem;
 
-  /* 🔥 구분선 추가 */
+
   padding-bottom: 0.8rem;
   border-bottom: 1px solid #00000020;
 }
@@ -417,8 +416,162 @@ html, body {
   color: #111;
   font-weight: 200;
 
-  /* 기본 숨김 */
+  
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.swiper {
+  width: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 650px !important;
+  height: auto;
+  overflow: visible;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .35s ease;
+}
+
+
+.swiper-slide-active .popup-img img {
+  transform: scale(1.03);
+}
+
+
+.popup-text {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+  margin-top: 1rem;
+  transition: .35s ease;
+}
+
+
+.swiper-slide-active .popup-text {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+.swiper-slide:not(.swiper-slide-active) .popup-text {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+
+.popup-text > h3 {
+  font-family: "Satoshi","Pretendard";
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #ffffff20;
+}
+
+.popup-text > p {
+  font-weight: 300;
+  font-size: .8rem;
+  padding-top: 1rem;
+  line-height: 1.4;
+}
+
+
+.popup-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.swiper-slide-active .popup-img::after {
+  background: rgba(0,0,0,0);
+}
+
+.popuphead {
+  padding: 3rem;
+  background-color: #191917;
+  color: #fff;
+}
+
+.popuphead > p {
+  color: #fff;
+}
+
+.mySwiper {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 3rem;
+  overflow: visible !important;
+}
+
+.popup-mask {
+  padding: 3rem 3rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+.popup-mask .mySwiper {
+  margin: 0 auto;
+  display: block;
+  overflow: visible;
+}
+
+
+.popup-prev,
+.popup-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  transition: 0.25s ease;
+}
+
+.popup-prev { left: 0; }
+.popup-next { right: 0; }
+
+.popup-prev::after,
+.popup-next::after {
+  font-family: "swiper-icons";
+  font-size: 20px;
+  color: #fff;
+}
+
+.popup-prev::after { content: "prev"; }
+.popup-next::after { content: "next"; }
+
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  display: none !important;
 }

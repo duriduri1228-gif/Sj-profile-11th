@@ -1,0 +1,39 @@
+@media (max-width:1300px){
+  .about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 500px;
+}
+
+/* .about-list li {
+  display: grid;
+  grid-template-columns: 3rem 7.5rem 1fr 6.5rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+} */
+
+.num {
+  font-family: "Satoshi", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.date {
+  font-family: "Satoshi", sans-serif;
+  font-size: 0.7rem;
+  color: #aaaaaa;
+}
+
+
+.org {
+  font-size: 0.7rem;
+  color: #bcbcbc;
+}
+.titles{
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.7rem;
+}
+}

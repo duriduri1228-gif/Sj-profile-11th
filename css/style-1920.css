@@ -1,4 +1,8 @@
-
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* ✅ 가로 스크롤 완전 차단 */
+}
 .hero {
   height: 960px;
   position: relative;
@@ -41,7 +45,7 @@
   font-family: "Playfair Display", serif;
   font-size: 8rem;
   line-height: 1.05;
-  font-weight: 900;
+  font-weight: 800;
   color: #000;          /* ✅ 혹시 투명도 섞여있을 대비 */
 }
 
@@ -88,10 +92,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Pretendard", sans-serif;
   background: #fff;
-  padding: 3rem 3rem;
+  padding: 0 3rem;
   box-sizing: border-box;
+  font-family: 'Satoshi' !important;
+  font-weight: 500;
 }
 .philo-left{
   display: flex;
@@ -106,13 +111,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1600px;
+  /* max-width: 1600px; */
 }
 
 .philo-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.25;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.1;
   color: #000;
 }
 
@@ -128,7 +133,7 @@
   flex-direction: column;
   justify-content: center;
   /* gap: 2.5rem; */
-  margin-top: 3rem; /* ✅ 오른쪽 전체 블록을 살짝 아래로 */
+  
 }
 
 .philo-en {
@@ -137,22 +142,283 @@
   line-height: 1.2;
   color: #C8C8C8;
    margin-left: auto;      /* ✅ 부모의 오른쪽으로 붙음 */
-  margin-right: 6rem; 
   margin-bottom: 6rem; 
   
 }
 
 .philo-ko {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   color: #333;
   word-break: keep-all;
   font-weight: 400;
-  width: 583px;
+  width: 500px;
      margin-left: auto;      /* ✅ 부모의 오른쪽으로 붙음 */
   margin-right: 12rem; 
   margin-bottom: 1rem;
 }
 .koko{
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+}
+.bbyong {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.bbyong.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bbyong-right {
+  opacity: 0;
+  transform: translateX(80px); /* 오른쪽에서 시작 */
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.bbyong-right.show {
+  opacity: 1;
+  transform: translateX(0); /* 제자리로 이동 */
+}
+.bbyong-left {
+  opacity: 0;
+  transform: translateX(-80px); /* ✅ 왼쪽에서 시작 */
+  transition: all 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.bbyong-left.show {
+  opacity: 1;
+  transform: translateX(0); /* ✅ 제자리로 이동 */
+}
+.fade-text {
+  display: inline-block;
+  color: #c8c8c8;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.fade-text span {
+  color: #c8c8c8;
+  transition: color 0.3s linear;
+  will-change: color;
+}
+.about {
+  background: #191917;
+  padding: 6rem 3rem;
+  font-family: "Pretendard", sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.about-inner {
+  width: 100%;
+  /* max-width: 1600px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 6rem;
+}
+
+/* ===== LEFT ===== */
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+}
+
+.about-photo {
+  position: relative;
+  width: 430px;
+}
+
+.about-photo img {
+  width: 100%;
+  display: block;
+}
+
+.about-title {
+  position: absolute;
+  top: 50%;
+  right: -80%;
+  transform: translateY(-50%);
+  font-family: "Playfair Display", serif;
+  font-size: 9rem;
+  line-height: 1;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.about-text h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.about-text p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: #bbbbbb;
+}
+
+/* ===== RIGHT ===== */
+
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 800px;
+}
+
+.about-list li {
+  display: grid;
+  grid-template-columns: 3rem 5rem 1fr 6.5rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.num {
+  font-family: "Satoshi", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.date {
+  font-family: "Satoshi", sans-serif;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+}
+
+
+.org {
+  font-size: 0.8rem;
+  color: #bcbcbc;
+}
+.titles{
+  font-family: "Pretendard", sans-serif;
+  font-size: 0.8rem;
+}
+.about-title.fade span {
+  display: inline-block;
+  opacity: 0;
+  transition: 0.1s ease;
+}
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 프로필 정보 박스 */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  margin: 1rem auto 0;
+}
+
+.profile-info div {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;  /* 🔥 EDUCATION처럼 긴 내용이 있을 때 줄바꿈 자연스럽게 */
+}
+
+.profile-info span {
+  width: 5.5rem;     /* 🔥 EDUCATION 항목 길이에 맞춰서 더 넓힘 */
+  font-weight: 600;
+  color: #d0d0d0;
+  flex-shrink: 0;    /* 🔥 줄어들지 않게 고정 */
+}
+
+.profile-info p {
+  color: #fff;
+  flex: 1;           /* 🔥 길게 늘어나는 내용도 자연스럽게 오른쪽으로 흐름 */
+  line-height: 1.5;
+}
+
+.skills {
+  padding: 3rem 3rem;
+  background: #f5f5f5;
+  font-family: "Satoshi", sans-serif;
+  
+}
+
+.skills-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+
+.skills-title {
+  font-family: "Satoshi", sans-serif !important;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.skills-sub {
+  font-size: 0.8rem;
+  color: #111;
+  font-weight: 400;
+  margin-top: 0.8rem;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem 4rem;
+}
+
+/* CARD */
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.skill-card .num {
+  font-family: "Satoshi", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;            
+  display: block;
+  opacity: 1 !important;  
+  z-index: 5;           
+}
+
+.skill-card h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+
+  /* 🔥 구분선 추가 */
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #00000020;
+}
+
+.skill-card .desc {
+  font-size: 1rem;
+  font-family: "Pretendard";
+  line-height: 1.6;
+  color: #111;
+  font-weight: 200;
+
+  /* 기본 숨김 */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }

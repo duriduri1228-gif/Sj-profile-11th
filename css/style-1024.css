@@ -31,23 +31,26 @@
     bottom: 1.5rem;
     font-size: 0.9rem;
   }
+
+
+
    .philosophy {
     height: auto;
-    padding: 0 2rem;
+    padding: 0 2rem; /* 좌우 2rem 유지 */
   }
 
   .philo-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4rem;
+    width: 100%;
   }
 
-  /* ===== 타이틀 영역 ===== */
   .philo-left {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 2rem;
-    padding-left: 3rem;        /* ✅ 왼쪽 여백 확보 */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 6rem;
   }
 
   .philo-title {
@@ -56,39 +59,212 @@
   }
 
   .philo-sub {
-    margin-top: 1rem;
     font-size: 0.95rem;
-  }
-  .dot{
-    display: none;
+    white-space: nowrap;
   }
 
-  /* ===== 본문 영역 ===== */
+  /* 본문 그룹 */
   .philo-right {
     width: 100%;
-    align-items: flex-start;
-    padding-left: 6rem;        /* ✅ 전체 본문 블록 왼쪽으로 기울어진 정렬 */
+    margin-top: 0;
+    padding-left: 6rem; /* 메인 본문 기본 위치 */
+    box-sizing: border-box;
   }
 
   .philo-en {
     width: 90%;
+    max-width: 968px;
     font-size: 1.4rem;
     line-height: 1.6;
-    margin: 0 0 3rem 0;
     color: #c8c8c8;
+    margin-bottom: 6rem;
     text-align: left;
   }
 
+  /* 🔹 맨 아래 텍스트만 살짝 오른쪽으로 이동 */
   .philo-ko {
     width: 85%;
-    font-size: 1rem;
+    max-width: 583px;
+    font-size: 0.8rem;
     line-height: 1.8;
     color: #333;
-    margin-bottom: 1.2rem;
+    margin-bottom: .5rem;
     text-align: left;
+
+    transform: translateX(2rem); /* ✅ 오른쪽으로 2rem 밀기 */
   }
 
   .koko {
     margin-bottom: 2rem;
+    transform: translateX(2rem); /* ✅ 동일한 오프셋 유지 */
   }
+  .about-inner {
+    gap: 2rem;
+  }
+
+  .about-photo {
+    width: 320px;
+  }
+
+  .about-title {
+    font-size: 6rem;
+    right: -40%;
+  }
+
+  .about-list {
+    width: 430px;
+  }
+
+  .about-list li {
+    grid-template-columns: 2.5rem 6rem 1fr 5rem;
+  }
+  .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem 4rem;
+}
+.skills {
+  padding: 3rem 2rem;
+  background: #f5f5f5;
+  font-family: "Satoshi", sans-serif;
+  
+}
+}
+@media (max-width: 900px) {
+  .about{
+    padding: 0;
+  }
+.about {
+    padding: 4rem 1rem;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3.5rem;
+    width: 100%;
+    margin: 0;
+  }
+
+  /* 사진 */
+  .about-photo {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .about-photo img {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  /* ABOUT ME 제목 */
+  .about-title {
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4.8rem;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* 소개문 */
+  .about-text {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .about-text p {
+    max-width: 360px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* 프로필 정보 */
+  .profile-info {
+    width: 100%;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .profile-info div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+
+  .profile-info span {
+    font-weight: 600;
+    margin-right: 1rem;
+    text-align: left;
+  }
+
+  .profile-info p {
+    flex: 1;
+    text-align: right;
+  }
+
+  /* 자격증 리스트 전체 영역 */
+  .about-right {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .about-list {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .about-title{
+    text-align: left;
+  }
+
+  /* 🔥 768 전용 리스트 레이아웃 */
+  .about-list li{
+    display: grid !important;
+    grid-template-columns: 4rem 2fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 1.2rem;
+    row-gap: 0.4rem;
+
+    /* 🔥 기존 PC 레이아웃 흔적 완전 삭제 */
+    justify-content: unset !important;
+    align-items: unset !important;
+    text-align: left !important;
+  }
+
+  .about-list .num{
+    grid-column: 1 / 4 !important;
+    grid-row: 1;
+    font-size: 1.2rem;
+  }
+  .about-list .date{
+    grid-column: 1 / 2 !important;
+    grid-row: 2;
+    font-size: .8rem;
+  }
+  .about-list .titles{
+    grid-column: 2 / 3 !important;
+    grid-row: 2;
+    font-size: .8rem;
+  }
+  .about-list .org{
+    grid-column: 3 / 4 !important;
+    grid-row: 2;
+    text-align:left !important;
+    font-size: .8rem;
+  }
+  .about {
+  padding: 6rem 2rem !important;
+
+}
 }

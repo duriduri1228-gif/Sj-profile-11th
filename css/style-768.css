@@ -53,11 +53,198 @@
   .philo-en {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
 
   .philo-ko {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     line-height: 1.6;
+  }
+.about {
+    padding: 4rem 1rem;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3.5rem;
+    width: 100%;
+  }
+
+  /* 사진 */
+  .about-photo {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .about-photo img {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  /* ABOUT ME 제목 */
+  .about-title {
+    position: absolute;
+    top: -6%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4.8rem;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 2;
+  }
+
+  /* 소개문 */
+  .about-text {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .about-text p {
+    max-width: 360px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* 프로필 정보 */
+  .profile-info {
+    width: 100%;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .profile-info div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+
+  .profile-info span {
+    font-weight: 600;
+    margin-right: 1rem;
+    text-align: left;
+  }
+
+  .profile-info p {
+    flex: 1;
+    text-align: right;
+  }
+
+  /* 자격증 리스트 전체 영역 */
+  .about-right {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .about-list {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  /* 🔥 768 전용 리스트 레이아웃 */
+  .about-list li{
+    display: grid !important;
+    grid-template-columns: 4rem 2fr 1fr !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 1.2rem;
+    row-gap: 0.4rem;
+
+    /* 🔥 기존 PC 레이아웃 흔적 완전 삭제 */
+    justify-content: unset !important;
+    align-items: unset !important;
+    text-align: left !important;
+  }
+
+  .about-list .num{
+    grid-column: 1 / 4 !important;
+    grid-row: 1;
+    font-size: 1.2rem;
+  }
+  .about-list .date{
+    grid-column: 1 / 2 !important;
+    grid-row: 2;
+    font-size: .8rem;
+  }
+  .about-list .titles{
+    grid-column: 2 / 3 !important;
+    grid-row: 2;
+    font-size: 1rem;
+  }
+  .about-list .org{
+    grid-column: 3 / 4 !important;
+    grid-row: 2;
+    text-align:left !important;
+    font-size: .8rem;
+  }
+   .about-title{
+    text-align: left;
+  }
+  .skills {
+    padding: 5rem 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .skill-card .desc {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 400px) {
+.about-inner {
+    padding: 0; /* ✅ 좌우 1rem 여백 확보 */
+    box-sizing: border-box;
+  }
+
+  .about-photo img {
+    width: 100%;
+    height: auto;
+  }
+  .about-text p {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+
+  }
+  .about-title {
+    position: absolute;
+    font-size: 5rem;
+    top: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto; /* 🔥 기존 right:-80% 제거 */
+  }
+
+  .about-text {
+
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+  .skills-header {
+    flex-direction: column;    
+    align-items: flex-start;   
+  }
+
+  .skills-title {
+    font-size: 1.9rem;       
+    line-height: 1.2;         
+    word-break: keep-all;   
+  }
+
+  .skills-sub {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
   }
 }

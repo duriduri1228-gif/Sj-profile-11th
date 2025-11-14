@@ -12,6 +12,12 @@
     --lnh120:1.2;
     --lnh140:1.4;
 }
+@media (min-width:2000px){
+    .common-frame{
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
 .play{
       font-family: "Playfair Display", serif;
 }
@@ -35,25 +41,22 @@ html{
     font-size: 20px;
     font-family: 'Pretendard',sans-serif;
 }
-.common-frame{
-    width: auto;
-    margin: 0 3rem;
-}
+
 @media (max-width:1024px){
     html{
     font-size: 18px;
     }
-    .common-frame{
+    /* .common-frame{
     width: auto;
     margin: 0 2rem;
-}
+} */
 }
 @media (max-width:768px){
     html{
     font-size: 14px;
     }
-    .common-frame{
+    /* .common-frame{
     width: auto;
     margin: 0 1rem;
-}
+} */
 }

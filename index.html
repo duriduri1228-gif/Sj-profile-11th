@@ -7,25 +7,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style-1920.css">
-    <link rel="stylesheet" href="./css/style-1024.css">
-    <link rel="stylesheet" href="./css/style-768.css">
+    <link rel="stylesheet" href="./css/common.css?v=1">
+    <link rel="stylesheet" href="./css/font.css?v=1">
+    <link rel="stylesheet" href="./css/reset.css?v=1">
+    <link rel="stylesheet" href="./css/style-1920.css?v=1">
+    <link rel="stylesheet" href="./css/style-1200.css?v=1">
+    <link rel="stylesheet" href="./css/style-1024.css?v=1">
+    <link rel="stylesheet" href="./css/style-768.css?v=1">
     <script src="./js/hero.js"></script>
+    <script src="./js/bbyong.js"></script>
+    <script src="./js/bbyong-right.js"></script>
+    <script src="./js/bbyong-left.js"></script>
+    <script src="./js/fade-text.js"></script>
+    <script src="./js/blur-part.js"></script>
+    <script src="./js/fade.js"></script>
+    <script src="./js/skills-Fade.js"></script>
 </head>
 <body>
+  <div class="common-frame">
 <section class="hero">
   <header class="header">
     <img src="./img/logo.svg" alt="SJ 로고" class="logo">
   </header>
 
   <div class="hero-inner">
-    <p class="sub">깊이를 디자인하다</p>
+    <p class="sub">기본을 지키는 디자인</p>
     <h1 class="title">
   <span>Design</span><br>
-  <span>With Depth</span>
+  <span>With Basic</span>
 </h1>
   </div>
 
@@ -40,22 +49,22 @@
 <section class="philosophy">
   <div class="philo-inner">
     <div class="philo-left">
-      <h2 class="philo-title">
+      <h2 class="philo-title bbyong">
         DESIGN THAT<br>WHISPERS NOT SHOUTS
       </h2>
-      <p class="philo-sub"> 소리치지 않아도, 깊이 울리는 디자인</p>
+      <p class="philo-sub bbyong"> 기본부터 정확하게</p>
     </div>
 
     <div class="philo-right">
-      <p class="philo-en">
+      <p class="philo-en bbyong-right fade-text">
         Simplicity isn’t silence — it’s intention.
         Every detail carries a reason, and every choice tells a story.
         I design interfaces that feel effortless,
         because they’re built with purpose.
       </p>
-      <p class="philo-ko">
+      <p class="philo-ko bbyong-left">
         디자인은 사용자가 이해하고 사용할 수 있게 만드는 과정이라고 생각합니다.</p>
-        <p class="philo-ko koko">겉으로 보이는 형태보다, 사용성을 높이는 구조와 흐름이 더 중요하다고 느낍니다.
+        <p class="philo-ko koko bbyong-left">겉으로 보이는 형태보다, 사용성을 높이는 구조와 흐름이 더 중요하다고 느낍니다.
         복잡한 구성보다 명확한 경험을 세워두어 디자인의 완성도를 높입니다.
         화면 안의 작은 여백 하나, 스크롤의 속도 같은 작은 움직임이 집중을 도와주는,
         사용자가 편하게 느낄 수 있는 디자인을 만드는 것이 제 목표입니다.
@@ -63,5 +72,145 @@
     </div>
   </div>
 </section>
+
+<section class="about">
+  <div class="about-inner">
+
+    <!-- LEFT -->
+    <div class="about-left">
+
+      <div class="about-photo">
+        <img src="./img/aboutme.jpg" alt="profile-image">
+
+        <h2 class="about-title fade">
+          About<br>ME
+        </h2>
+      </div>
+
+      <!-- 소개문 -->
+      <div class="about-text">
+        <h3>작은 경험에서도 배움을 찾는 디자이너, 유승진입니다</h3>
+        <p>
+          디자인은 결국 누군가의 일상 속에서 쓰이는 일이라고 생각합니다.
+          복잡한 기능보다 사용자가 쉽게 이해하고 편하게 사용할 수 있는 흐름을 만듭니다.
+          작은 한 번의 클릭, 스크롤 속도 같은 작은 움직임에도 세심하게 의미를 담으며,
+          사람의 손끝에 자연스럽게 닿는 디자인을 만들어가고 있습니다.
+        </p>
+      </div>
+
+      <!-- 프로필 info 추가 -->
+      <div class="profile-info">
+        <div><span>NAME</span><p>유승진</p></div>
+        <div><span>BIRTH</span><p>1999. 12. 28</p></div>
+        <div><span>MBTI</span><p>INFJ</p></div>
+        <div><span>PHONE</span><p>010-3361-6088</p></div>
+        <div><span>EDUCATION</span><p>인덕대학교 시각디자인학과 졸업</p></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="about-right">
+      <ul class="about-list">
+        <li class="bbyong-right">
+          <span class="num">01</span>
+          <span class="date">2025.09.12</span>
+          <span class="titles">GTQi(그래픽 기술 자격)-1급</span>
+          <span class="org">한국생산성본부KPC</span>
+        </li>
+
+        <li class="bbyong-left">
+          <span class="num">02</span>
+          <span class="date">2020.09.14</span>
+          <span class="titles">1종 보통 운전면허</span>
+          <span class="org">경찰청</span>
+        </li>
+
+        <li class="bbyong-right">
+          <span class="num">03</span>
+          <span class="date">2018.06.15</span>
+          <span class="titles">GTQ(그래픽 기술 자격)-1급</span>
+          <span class="org">한국생산성본부KPC</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills">
+  <div class="skills-header ">
+    <h2 class="skills-title bbyong-left">SKILLS<br>&LANGUAGES</h2>
+    <p class="skills-sub bbyong-right">기획부터 디자인, 개발까지 직접 만들어보는 과정에서 도구와 언어에 대한 이해도를 높였습니다.<br> 실습 중심으로 학습하여 Figma, HTML·CSS, JavaScript 사용이 익숙해졌습니다.</p>
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card fade-box">
+      <span class="num">01</span>
+      <h3>Photoshop</h3>
+      <p class="desc">
+        Photoshop을 통해 이미지를 보정하고 합성하여 시각적인 완성도를 높일 수 있습니다. 배너, 썸네일, 웹 시안을 자유롭게 제작할 수 있습니다. 사진과 그래픽을 조합해 감각적인 디자인을 완성할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">02</span>
+      <h3>Illustrator</h3>
+      <p class="desc">
+        Illustrator를 통해 로고, 아이콘, 인포그래픽 등 다양한 벡터 디자인을 제작할 수 있습니다. 정확한 도형과 선을 활용해 깔끔한 그래픽 작업이 가능합니다. 브랜드 아이덴티티를 시각적으로 표현할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">03</span>
+      <h3>Figma</h3>
+      <p class="desc">
+        Figma를 통해 웹과 모바일 인터페이스를 시각적으로 설계할 수 있습니다. 컴포넌트와 프로토타입 기능을 활용해 사용자 흐름을 쉽게 확인할 수 있습니다. 디자이너와 개발자 간의 협업을 효율적으로 진행할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">04</span>
+      <h3>Premiere Pro</h3>
+      <p class="desc">
+        기본적인 컷 편집과 자막 삽입 같은 간단한 영상 작업을 할 수 있습니다. 필요한 장면을 깔끔하게 정리하고, 화면 흐름을 자연스럽게 다듬는 정도의 편집까지 가능합니다.
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">05</span>
+      <h3>HTML5</h3>
+      <p class="desc">
+        HTML을 통해 웹페이지의 기본 구조를 만들 수 있습니다. 콘텐츠를 논리적으로 구분하고 의미를 부여해 접근성 높은 페이지를 설계할 수 있습니다. 디자인 시안을 실제 웹 화면으로 구현하는 기초가 됩니다..
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">06</span>
+      <h3>CSS</h3>
+      <p class="desc">
+        CSS를 통해 웹페이지의 시각적 스타일을 자유롭게 표현할 수 있습니다. 색상, 폰트, 레이아웃을 조정해 디자인 의도를 정확히 전달할 수 있습니다. 다양한 디바이스에 맞춘 반응형 웹 디자인을 구현할 수 있습니다.
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">07</span>
+      <h3>JavaScript</h3>
+      <p class="desc">
+        JavaScript를 통해 웹페이지에 생동감 있는 인터랙션을 추가할 수 있습니다. 버튼 클릭, 스크롤, 애니메이션 등 사용자와 상호작용하는 기능을 구현할 수 있습니다. 이를 통해 사용자의 경험을 더욱 풍부하게 만들 수 있습니다.
+      </p>
+    </div>
+
+    <div class="skill-card fade-box">
+      <span class="num">08</span>
+      <h3>Git / GitHub</h3>
+      <p class="desc">
+        Git과 GitHub를 통해 디자인 및 코드의 버전을 체계적으로 관리할 수 있습니다. 작업 이력을 기록하고 복원하여 효율적인 협업이 가능합니다. 팀 프로젝트에서 함께 작업하며 유지보수를 원활히 진행할 수 있습니다.
+      </p>
+    </div>
+  </div>
+</section>
+</div>
 </body>
 </html>

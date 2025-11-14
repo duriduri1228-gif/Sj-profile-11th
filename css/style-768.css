@@ -202,6 +202,7 @@
   }
   .popuphead {
     padding: 3rem 1rem;
+    
 }
  .popup-mask .mySwiper {
     width: 100%;
@@ -245,6 +246,14 @@
   top: 0 !important;
   height: 74% !important; /* 원하는 만큼만 그림자 보이게 */
 }
+.skills-title {
+    font-size: 2.2rem !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 99999 !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
 }
 
 

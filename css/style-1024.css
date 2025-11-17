@@ -129,14 +129,102 @@
   font-family: "Satoshi", sans-serif;
   
 }
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 500px !important;
-  height: auto;
-  overflow: visible;
+.popup-section {
+    padding: 3rem 2rem;
+    background: #191917;
+    color: #fff;
+    font-family: "Pretendard", sans-serif;
 }
+ .popup-item {
+    width: 320px;
+  }
 
+  .popup-card {
+    width: 320px;
+    height: 320px;
+  }
+
+  /* gap 축소 */
+  .popup-track {
+    gap: 3rem;
+  }
+
+  /* 지그재그 약하게 */
+  .popup-item:nth-child(odd) {
+    margin-top: -6rem;
+  }
+
+  .popup-item:nth-child(even) {
+    margin-top: 6rem;
+  }
+
+  .popup-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .popup-info p {
+    font-size: 0.9rem;
+  }
+   .popup-track {
+        animation-duration: 18s !important;
+    }
+    @keyframes popup-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1816px); } /* 1024에서 정확히 계산된 값 */
+  }
+    .poster-wrap {
+    padding: 0 2rem 3rem 2rem;
+    gap: 3rem;
+  }
+
+  .poster-left {
+    gap: 5rem;
+    flex: 0 0 50%;
+  }
+
+  .poster-text p {
+    font-size: 0.75rem;
+  }
+
+  .poster-right {
+    flex: 0 0 45%;
+  }
+  #banner-brand {
+    font-size: 4rem;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 800;
+    color: #3d4a8a;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+}
+.banner-desc h4 {
+    width: 60%;
+    font-size: 1rem;
+}
+.banner-desc p {
+    width: 60%;
+    font-size: 0.8rem;
+    color: #191917;
+    line-height: 1.7;
+}
+.banner-section {
+    width: 100%;
+    background: #f4f4f4;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+}
+.posters {
+    padding: 3rem 2rem;
+}
+.banner-num {
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 4px solid #3d4a8a;
+    padding-bottom: 0.2rem;
+    color: #3d4a8a;
+}
 }
 @media (max-width: 900px) {
   .about{
@@ -274,9 +362,6 @@
   .about {
   padding: 6rem 2rem !important;
 
-}
-.popuphead {
-    padding: 3rem 2rem;
 }
 .popup-prev,
 .popup-next {

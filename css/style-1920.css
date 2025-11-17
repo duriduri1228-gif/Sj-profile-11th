@@ -147,7 +147,7 @@ html, body {
 
 .philo-ko {
   font-size: 0.8rem;
-  line-height: 1.2;
+  line-height: 1.7;
   color: #333;
   word-break: keep-all;
   font-weight: 400;
@@ -371,7 +371,7 @@ html, body {
   color: #111;
   font-weight: 400;
   margin-top: 0.8rem;
-  line-height: 1.4;
+  line-height: 1.7;
 }
 
 
@@ -421,157 +421,326 @@ html, body {
   transform: translateY(20px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.swiper {
-  width: 500px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 600px !important;
-  height: auto;
-  overflow: visible;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: transform .35s ease;
-}
-
-
-.swiper-slide-active .popup-img img {
-  transform: scale(1.03);
-}
-
-
-.popup-text {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateY(10px);
-  margin-top: 1rem;
-  transition: .35s ease;
-}
-
-
-.swiper-slide-active .popup-text {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-
-.swiper-slide:not(.swiper-slide-active) .popup-text {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-
-.popup-text > h3 {
-  font-family: "Satoshi","Pretendard";
-  font-weight: 600;
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  border-bottom: 1px solid #ffffff20;
-}
-
-.popup-text > p {
-  font-weight: 300;
-  font-size: .8rem;
-  padding-top: 1rem;
-  line-height: 1.4;
-}
-
-
-.popup-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.popup-img::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
-  transition: 0.3s ease;
-  pointer-events: none;
-}
-
-.swiper-slide-active .popup-img::after {
-  background: rgba(0,0,0,0);
-}
-
-.popuphead {
-  padding: 3rem;
-  background-color: #191917;
-  color: #fff;
-}
-
-.popuphead > p {
-  color: #fff;
-}
-
-.mySwiper {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  margin-top: 3rem;
-  overflow: visible !important;
-}
-
-.popup-mask {
+.popup-section {
   padding: 3rem 3rem;
+  background: #191917;
+  color: #fff;
+  font-family: "Pretendard", sans-serif;
+}
+
+.popup-title {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.popup-sub {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #bbbbbb;
+  line-height: 1.6;
+}
+.popuphead>p{
+  color: #fff;
+}
+
+/* ===============================
+      TRACK (흘러가기)
+=============================== */
+.popup-track-wrapper {
   width: 100%;
-  overflow: hidden;
+  margin-top: 12rem;   /* 기존 4rem → 8rem로 증가 */
+}
+
+.popup-track {
+  display: flex;
+  gap: 4rem;
+  animation: popup-slide 5s linear infinite;
+}
+
+@keyframes popup-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* hover 시 슬라이드 멈춤 */
+.popup-item:hover ~ .popup-track,
+.popup-item:hover .popup-track {
+  animation-play-state: paused !important;
+}
+
+.popup-item:hover {
+  animation-play-state: paused;
+}
+
+.popup-track {
+  animation-play-state: running;
+}
+
+.popup-track:hover {
+  animation-play-state: paused;
+}
+/* ===============================
+      ITEM (카드 + 텍스트)
+=============================== */
+.popup-item {
+  width: 420px;
+  flex-shrink: 0;
   position: relative;
+}
+
+/* 지그재그 (크게 표현) */
+.popup-item:nth-child(odd) {
+  margin-top: -8rem;   /* 위로 크게 */
+}
+
+.popup-item:nth-child(even) {
+  margin-top: 8rem;    /* 아래로 크게 */
+}
+
+
+/* ===============================
+      카드
+=============================== */
+.popup-card {
+  width: 420px;
+  height: 420px;
+  overflow: hidden;
+}
+
+.popup-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ===============================
+      아래 텍스트 (hover 시 fade-in)
+=============================== */
+.popup-info {
+  opacity: 0;
+  transition: opacity .35s ease;
+  margin-top: 1.6rem;
+  color: #fff;
+}
+
+.popup-info h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #ffffff20;
+  font-family: "Satoshi", sans-serif;
+  padding-bottom: 0.8rem;
+}
+
+.popup-info p {
+  color: #ffffff;
+  line-height: 1.7;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+.popup-card:hover + .popup-info {
+  opacity: 1;
+}
+
+/* ===============================
+      카드 hover 효과 (선택)
+=============================== */
+.popup-card:hover {
+  transform: scale(1.03);
+  transition: transform .3s ease;
+}
+.poster-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* ← 좌/우 콘텐츠의 세로 중앙 맞춤 */
+  padding: 0 3rem 3rem 3rem;
+  gap: 4rem;
+  /* height: 100vh; */
+  
+}
+/* 왼쪽 전체 묶음 */
+.poster-left {
+  display: flex;
+  align-items: center;   /* 숫자 / 라인 / 텍스트를 가로 정렬 */
+  gap: 8rem;
+  flex: 0 0 45%;
+}
+
+/* 숫자 */
+.poster-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Satoshi", sans-serif;
+}
+
+/* 세로 라인 */
+.poster-line {
+    width: 5px;
+    height: 40px;
+    background: #191917;
+}
+
+/* 텍스트 부분 */
+.poster-text h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.poster-text p {
+  line-height: 1.65;
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+/* 오른쪽 이미지 */
+.poster-right {
+  flex: 0 0 40%;
+  max-width: 650px;      /* ← 너 스샷 크기 기준 */
+}
+
+.poster-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.posters{
+  padding: 3rem 3rem;
+}
+.posters>h2 {
+  font-family: "Satoshi", sans-serif !important;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.posters>p {
+    font-size: 0.8rem;
+    color: #111;
+    font-weight: 400;
+    margin-top: 0.8rem;
+    line-height: 1.7;
+}
+.poste{
+  background-color: #f3f3f3;
+  
+}
+.banner-section {
+  width: 100%;
+  background: #f4f4f4;
+  padding: 3rem;
   box-sizing: border-box;
 }
 
-
-.popup-mask .mySwiper {
-  margin: 0 auto;
-  display: block;
-  overflow: visible;
+/* 큰 헤더 */
+.banner-header h2 {
+  font-family: "Satoshi", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
+.banner-header p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
 
-.popup-prev,
-.popup-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
+/* 브랜드명 + 번호 정렬 */
+.banner-top {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 50;
-  transition: 0.25s ease;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 3rem;
 }
 
-.popup-prev { left: 0; }
-.popup-next { right: 0; }
-
-.popup-prev::after,
-.popup-next::after {
-  font-family: "swiper-icons";
-  font-size: 20px;
-  color: #fff;
+#banner-brand {
+  font-size: 7rem;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 800;
+  color: #3d4a8a;
+  margin: 0;
+  padding: 0;
+  line-height: 1;     /* ← 필수 */
+  display: block;
 }
 
-.popup-prev::after { content: "prev"; }
-.popup-next::after { content: "next"; }
-
-
-.mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev {
-  display: none !important;
+.banner-num {
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 4px solid #3d4a8a;
+  padding-bottom: 0.2rem;
+  color: #3d4a8a;
 }
+
+/* 배너 이미지 */
+.banner-img-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;   /* 🔥 이미지 오른쪽 정렬 */
+  margin-top: 1rem;
+}
+
+
+/* 설명 영역 */
+
+.banner-desc h4 {
+  width: 40%;
+  font-size: 1.5rem;
+  color: #191917;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid #19191720;
+  font-family: "Satoshi", sans-serif;
+}
+
+.banner-desc p {
+  width: 40%;
+  font-size: 0.8rem;
+  color: #191917;
+  line-height: 1.7;
+}
+.banner-content {
+  display: flex;
+  flex-direction: column;  /* 위→아래 배치 */
+  align-items: flex-end;    /* 🔥 오른쪽으로 정렬 */
+  width: 100%;
+}
+
+
+/* 아래 텍스트 */
+.banner-desc {
+  width: 90%;               /* 🔥 배너랑 정확히 줄 맞춤 */
+  text-align: left;         /* 왼쪽 정렬 */
+  margin-top: 1rem;
+}
+.banner-img-wrap {
+  width: 90%;
+  margin: 1rem 0 0 auto;  /* 왼쪽 여백 / 오른쪽 붙이기 */
+  display: block;         /* flex 필요 없음 */
+}
+
+/* Swiper는 랩을 꽉 채움 */
+.myBannerSwiper {
+  width: 100%;
+}
+
+/* 슬라이드/이미지: 랩 기준으로 꽉 채우기 */
+.myBannerSwiper .swiper-slide {
+  width: 100%;
+}
+
+.myBannerSwiper .swiper-slide img {
+  width: 100%;   /* 파란 랩 안 가로 100% */
+  height: auto;  /* 비율 유지 (잘림 최소화) */
+  display: block;
+}
+.banner-bg {
+  background: #f4f4f4;
+  
+}
+

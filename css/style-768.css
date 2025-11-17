@@ -200,52 +200,6 @@
   .skill-card .desc {
     max-width: 100%;
   }
-  .popuphead {
-    padding: 3rem 1rem;
-    
-}
- .popup-mask .mySwiper {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  /* ⭐ 모바일 커버플로우 핵심 */
-  .swiper-slide {
-    width: 75vw !important;    /* 중앙 슬라이드 너비 = 화면폭의 75% */
-    max-width: 360px;          /* 너무 커지지 않도록 상한선 */
-    min-width: 240px;          /* 너무 작아지지 않도록 하한선 */
-    height: auto;
-  }
-
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* 화살표 축소 */
-  .popup-prev,
-  .popup-next {
-    width: 30px;
-    height: 30px;
-  }
-
-  .popup-prev::after,
-  .popup-next::after {
-    font-size: 12px;
-  }
-
-  .popup-prev { left: 4px; }
-  .popup-next { right: 4px; }
-  .swiper-slide {
-  overflow: visible !important;
-}
-
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  bottom: auto !important;
-  top: 0 !important;
-  height: 74% !important; /* 원하는 만큼만 그림자 보이게 */
-}
 .skills-title {
     font-size: 2.2rem !important;
     display: block !important;
@@ -254,6 +208,126 @@
     transform: none !important;
     -webkit-transform: none !important;
   }
+  .popup-item {
+    width: 260px;
+  }
+
+  .popup-card {
+    width: 260px;
+    height: 260px;
+  }
+
+  /* gap 더 축소 */
+  .popup-track {
+    gap: 2rem;
+  }
+
+  /* 지그재그 더 축소 */
+  .popup-item:nth-child(odd) {
+    margin-top: -4rem;
+  }
+
+  .popup-item:nth-child(even) {
+    margin-top: 4rem;
+  }
+
+  .popup-info h3 {
+    font-size: 1rem;
+  }
+
+  .popup-info p {
+    font-size: 0.85rem;
+  }
+   .popup-track {
+        animation-duration: 16s !important;
+    }
+  @keyframes popup-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1500px); } /* 260px × 카드 수 기반으로 다시 계산 */
+  }
+    .poster-wrap {
+    flex-direction: column;
+    padding: 0 1rem 3rem 1rem;
+    height: auto !important;   /* ← 여백 개판나는 원인 해결 */
+    gap: 2rem;
+  }
+.posters {
+    padding: 3rem 1rem;
+}
+.posters>h2 {
+    font-family: "Satoshi", sans-serif !important;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+  .poster-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  /* 🔥 작대기 제거 */
+  .poster-line {
+    display: none;
+  }
+
+  .poster-number {
+    font-size: 1.4rem;
+  }
+
+  .poster-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .poster-text p {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+
+  /* 이미지 */
+
+  .poster-right img {
+    width: 100%;
+  }.poster-wrap {
+  height: calc(var(--vh, 1vh) * 100);
+}
+.banner-header h2 {
+    font-family: "Satoshi", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+.banner-section {
+    width: 100%;
+    background: #f4f4f4;
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+}
+.banner-img-wrap {
+    width: 100%;
+    /* margin: 1rem 0 0 auto; */
+    display: block;
+}
+.banner-num {
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid #3d4a8a;
+    padding-bottom: 0.2rem;
+    color: #3d4a8a;
+}
+.banner-desc {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+.banner-desc h4 {
+    width: 100%;
+
+}
+.banner-desc p {
+    width: 100%;
+
+}
 }
 
 
@@ -317,5 +391,4 @@
   .popup-next::after {
     font-size: 10px;
   }
-  
 }

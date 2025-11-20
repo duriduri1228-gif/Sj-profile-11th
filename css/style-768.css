@@ -238,13 +238,17 @@
   .popup-info p {
     font-size: 0.85rem;
   }
-   .popup-track {
+  .popup-section::before {
+  content: "POPUPS";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 9rem;
+}
+   /* .popup-track {
         animation-duration: 16s !important;
-    }
-  @keyframes popup-slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1500px); } /* 260px × 카드 수 기반으로 다시 계산 */
-  }
+    } */
     .poster-wrap {
     flex-direction: column;
     padding: 0 1rem 3rem 1rem;
@@ -328,6 +332,61 @@
     width: 100%;
 
 }
+#banner-brand {
+    font-size: 2rem;
+
+}
+.sub {
+
+    margin-top: 0;
+}
+.project h3 {
+    font-family: "Satoshi", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 0 3rem;
+}
+.project-sticky-menu a {
+    display: block;
+    background-color: #191917;
+    color: #fff;
+    padding: 0.7rem 1.4rem;
+    text-decoration: none;
+}
+.project-sticky-menu a {
+    font-size: 0.7rem;
+}
+ .project-sticky-menu{
+  display: flex;
+  gap: 1rem;
+  position: sticky;
+  left: 0;
+  top: 1rem;
+  list-style: none;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+ }
+ .project-sticky-menu a{
+  display: block;
+  background-color: #000000cb;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: .3rem 1rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  
+ }
+ .project h3 {
+    font-family: "Satoshi", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 0 1rem;
+}
+.project p {
+    padding: 0 1rem;
+}
 }
 
 
@@ -391,4 +450,12 @@
   .popup-next::after {
     font-size: 10px;
   }
+    .popup-section::before {
+  content: "POPUPS";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7rem;
+}
 }

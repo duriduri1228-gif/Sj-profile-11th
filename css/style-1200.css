@@ -36,4 +36,13 @@
   font-family: "Pretendard", sans-serif;
   font-size: 0.7rem;
 }
+.popup-section::before {
+  content: "POPUPS";
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+
+}
 }

@@ -1,7 +1,5 @@
 html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+overflow-x: clip; 
 }
 .hero {
   height: 960px;
@@ -14,17 +12,57 @@ html, body {
   overflow: hidden;
   padding: 0 3rem;
 }
-
-
-.header {
-  position: absolute;
-  top: 2rem;
-  left: 3rem;
-  z-index: 5;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 500000;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.6s ease 0s;
+}
+header.fadeout{
+  filter: blur(100px);
+  opacity: 0;
+  pointer-events: none;
+}
+header .common-frame{
+  padding: 1rem 3rem;
+}
+.btn-menu{
+  display: none;
+}
+.header-smart{
+  display: none;
+}
+.gnb{
+  display: inline-flex;
+  gap: 2rem ;
+  font-size: 0.7rem;
+  font-weight: 500;
+  background-color: #000000cb;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: 100px;
+  align-items: center;
+  font-family: "Satoshi", sans-serif;
+}
+.sjlogo{
+  width: 0.8rem;
+  color: #fff;
+  filter: invert(1) brightness(2);
+}
 .logo {
-  width: 2rem;
+  width: 1.2rem;
   height: auto;
 }
 
@@ -38,7 +76,8 @@ html, body {
 .sub {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-top: 4rem;
+
 }
 
 .title {
@@ -158,6 +197,9 @@ html, body {
 }
 .koko{
   margin-bottom: 4rem;
+}
+.kos{
+  font-weight: 700;
 }
 .bbyong {
   opacity: 0;
@@ -410,11 +452,11 @@ html, body {
 }
 
 .skill-card .desc {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: "Pretendard";
   line-height: 1.6;
-  color: #111;
-  font-weight: 200;
+  color: #191917;
+  font-weight: 300;
 
   
   opacity: 0;
@@ -426,6 +468,7 @@ html, body {
   background: #191917;
   color: #fff;
   font-family: "Pretendard", sans-serif;
+  position: relative;
 }
 
 .popup-title {
@@ -454,12 +497,12 @@ html, body {
 .popup-track {
   display: flex;
   gap: 4rem;
-  animation: popup-slide 5s linear infinite;
+  animation: popup-slide linear infinite; /* duration 제거 */
 }
 
 @keyframes popup-slide {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(var(--slide-distance)); }
 }
 
 /* hover 시 슬라이드 멈춤 */
@@ -473,7 +516,9 @@ html, body {
 }
 
 .popup-track {
-  animation-play-state: running;
+  display: flex;
+  gap: 4rem;                /* 이 gap값을 JS에서 같이 읽어서 거리 계산함 */
+  animation: popup-slide 20s linear infinite;
 }
 
 .popup-track:hover {
@@ -550,6 +595,25 @@ html, body {
   transform: scale(1.03);
   transition: transform .3s ease;
 }
+.popup-section::before {
+  content: "POPUPS";
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  font-size: 18rem;
+  font-weight: 900;
+  color: #31312E; /* ← 거의 투명하게 */
+  letter-spacing: -1rem;
+  white-space: nowrap;
+  pointer-events: none; /* 클릭 방해 X */
+  user-select: none;
+  font-family: "Satoshi", sans-serif;
+}
+.popup-track-wrapper {
+  /* overflow-x: hidden; */
+}
+
 .poster-wrap {
   display: flex;
   justify-content: space-between;
@@ -583,17 +647,17 @@ html, body {
 
 /* 텍스트 부분 */
 .poster-text h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 .poster-text p {
   line-height: 1.65;
-  color: #555;
+  color: #191917;
   font-size: 0.8rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 /* 오른쪽 이미지 */
@@ -689,7 +753,7 @@ html, body {
 
 .banner-desc h4 {
   width: 40%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #191917;
   font-weight: 600;
   padding-bottom: 0.8rem;
@@ -742,5 +806,64 @@ html, body {
 .banner-bg {
   background: #f4f4f4;
   
+}
+.myBannerSwiper .swiper-slide {
+  width: 100% !important;
+}
+.project{
+  margin-top: 3rem;
+  
+}
+.project-frame {
+  position: relative;
+}
+.project h3{
+    font-family: "Satoshi", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    padding: 0 3rem;
+    
+}
+.project p{
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    padding: 0 3rem;
+  }
+ .project-sticky-menu{
+  display: flex;
+  gap: 1rem;
+  position: sticky;
+  left: 0;
+  top: 4.5rem;
+  list-style: none;
+  padding: 0 3rem;
+  margin-bottom: 3rem;
+ }
+ .project-sticky-menu a{
+  display: block;
+  background-color: #000000cb;
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 1rem 2.4rem;
+  text-decoration: none;
+  
+ }
+ .project-sticky-menu a:hover{
+  background-color: #454545;
+ }
+.project-img{
+  width: 100%;
+}
+.project-img picture,
+.project-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 3rem;
 }
 

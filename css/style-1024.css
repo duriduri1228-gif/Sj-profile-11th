@@ -39,7 +39,7 @@
 
    .philosophy {
     height: auto;
-    padding: 0 2rem; /* 좌우 2rem 유지 */
+    padding: 0 2rem;
   }
 
   .philo-inner {
@@ -66,11 +66,11 @@
     white-space: nowrap;
   }
 
-  /* 본문 그룹 */
+
   .philo-right {
     width: 100%;
     margin-top: 0;
-    padding-left: 6rem; /* 메인 본문 기본 위치 */
+    padding-left: 6rem;
     box-sizing: border-box;
   }
 
@@ -84,7 +84,6 @@
     text-align: left;
   }
 
-  /* 🔹 맨 아래 텍스트만 살짝 오른쪽으로 이동 */
   .philo-ko {
     width: 85%;
     max-width: 583px;
@@ -94,12 +93,12 @@
     margin-bottom: .5rem;
     text-align: left;
 
-    transform: translateX(2rem); /* ✅ 오른쪽으로 2rem 밀기 */
+    transform: translateX(2rem); 
   }
 
   .koko {
     margin-bottom: 2rem;
-    transform: translateX(2rem); /* ✅ 동일한 오프셋 유지 */
+    transform: translateX(2rem); 
   }
   .about-inner {
     gap: 2rem;
@@ -147,12 +146,12 @@
     height: 320px;
   }
 
-  /* gap 축소 */
+
   .popup-track {
     gap: 3rem;
   }
 
-  /* 지그재그 약하게 */
+
   .popup-item:nth-child(odd) {
     margin-top: -6rem;
   }
@@ -168,9 +167,7 @@
   .popup-info p {
     font-size: 0.9rem;
   }
-   /* .popup-track {
-        animation-duration: 18s !important;
-    } */
+
 .popup-section::before {
   content: "POPUPS";
   position: absolute;
@@ -319,6 +316,18 @@
 .project p {
     padding: 0 2rem;
 }
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  padding-top: 3rem;
+}
+.sub-projects{
+  padding: 3rem 2rem;
+}
+ .ty-inner h1 {
+    font-size: 3.5rem;
+  }
 }
 @media (max-width: 900px) {
   .about{
@@ -339,7 +348,7 @@
     margin: 0;
   }
 
-  /* 사진 */
+
   .about-photo {
     width: 100%;
     max-width: 360px;
@@ -352,7 +361,6 @@
     margin-top: 3rem;
   }
 
-  /* ABOUT ME 제목 */
   .about-title {
     position: absolute;
     top: -6%;
@@ -365,7 +373,7 @@
     z-index: 2;
   }
 
-  /* 소개문 */
+
   .about-text {
     text-align: center;
     margin-top: 0.5rem;
@@ -377,7 +385,7 @@
     line-height: 1.65;
   }
 
-  /* 프로필 정보 */
+
   .profile-info {
     width: 100%;
     margin: 1.5rem 0;
@@ -403,7 +411,7 @@
     text-align: right;
   }
 
-  /* 자격증 리스트 전체 영역 */
+
   .about-right {
     width: 100%;
     margin-top: 2rem;
@@ -418,7 +426,7 @@
     text-align: left;
   }
 
-  /* 🔥 768 전용 리스트 레이아웃 */
+
   .about-list li{
     display: grid !important;
     grid-template-columns: 4rem 2fr 1fr !important;
@@ -426,7 +434,7 @@
     column-gap: 1.2rem;
     row-gap: 0.4rem;
 
-    /* 🔥 기존 PC 레이아웃 흔적 완전 삭제 */
+  
     justify-content: unset !important;
     align-items: unset !important;
     text-align: left !important;

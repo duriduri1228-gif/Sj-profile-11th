@@ -1,5 +1,7 @@
 html, body {
 overflow-x: clip; 
+max-width: 1920px;
+margin: 0 auto;
 }
 .hero {
   height: 960px;
@@ -406,6 +408,8 @@ header .common-frame{
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
 }
 
 .skills-sub {
@@ -486,18 +490,16 @@ header .common-frame{
   color: #fff;
 }
 
-/* ===============================
-      TRACK (흘러가기)
-=============================== */
+
 .popup-track-wrapper {
   width: 100%;
-  margin-top: 12rem;   /* 기존 4rem → 8rem로 증가 */
+  margin-top: 12rem; 
 }
 
 .popup-track {
   display: flex;
   gap: 4rem;
-  animation: popup-slide linear infinite; /* duration 제거 */
+  animation: popup-slide linear infinite; 
 }
 
 @keyframes popup-slide {
@@ -505,7 +507,7 @@ header .common-frame{
   100% { transform: translateX(var(--slide-distance)); }
 }
 
-/* hover 시 슬라이드 멈춤 */
+
 .popup-item:hover ~ .popup-track,
 .popup-item:hover .popup-track {
   animation-play-state: paused !important;
@@ -517,35 +519,30 @@ header .common-frame{
 
 .popup-track {
   display: flex;
-  gap: 4rem;                /* 이 gap값을 JS에서 같이 읽어서 거리 계산함 */
+  gap: 4rem;          
   animation: popup-slide 20s linear infinite;
 }
 
 .popup-track:hover {
   animation-play-state: paused;
 }
-/* ===============================
-      ITEM (카드 + 텍스트)
-=============================== */
+
 .popup-item {
   width: 420px;
   flex-shrink: 0;
   position: relative;
 }
 
-/* 지그재그 (크게 표현) */
+
 .popup-item:nth-child(odd) {
-  margin-top: -8rem;   /* 위로 크게 */
+  margin-top: -8rem;  
 }
 
 .popup-item:nth-child(even) {
-  margin-top: 8rem;    /* 아래로 크게 */
+  margin-top: 8rem;  
 }
 
 
-/* ===============================
-      카드
-=============================== */
 .popup-card {
   width: 420px;
   height: 420px;
@@ -559,9 +556,7 @@ header .common-frame{
 }
 
 
-/* ===============================
-      아래 텍스트 (hover 시 fade-in)
-=============================== */
+
 .popup-info {
   opacity: 0;
   transition: opacity .35s ease;
@@ -588,9 +583,7 @@ header .common-frame{
   opacity: 1;
 }
 
-/* ===============================
-      카드 hover 효과 (선택)
-=============================== */
+
 .popup-card:hover {
   transform: scale(1.03);
   transition: transform .3s ease;
@@ -603,49 +596,47 @@ header .common-frame{
   transform: translate(-50%, -50%);
   font-size: 18rem;
   font-weight: 900;
-  color: #31312E; /* ← 거의 투명하게 */
+  color: #31312E; 
   letter-spacing: -1rem;
   white-space: nowrap;
-  pointer-events: none; /* 클릭 방해 X */
+  pointer-events: none; 
   user-select: none;
   font-family: "Satoshi", sans-serif;
 }
-.popup-track-wrapper {
-  /* overflow-x: hidden; */
-}
+
 
 .poster-wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;   /* ← 좌/우 콘텐츠의 세로 중앙 맞춤 */
+  align-items: center;  
   padding: 0 3rem 3rem 3rem;
   gap: 4rem;
-  /* height: 100vh; */
+
   
 }
-/* 왼쪽 전체 묶음 */
+
 .poster-left {
   display: flex;
-  align-items: center;   /* 숫자 / 라인 / 텍스트를 가로 정렬 */
+  align-items: center;  
   gap: 8rem;
   flex: 0 0 45%;
 }
 
-/* 숫자 */
+
 .poster-number {
   font-size: 1.6rem;
   font-weight: 700;
   font-family: "Satoshi", sans-serif;
 }
 
-/* 세로 라인 */
+
 .poster-line {
     width: 5px;
     height: 40px;
     background: #191917;
 }
 
-/* 텍스트 부분 */
+
 .poster-text h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -660,10 +651,10 @@ header .common-frame{
   font-weight: 300;
 }
 
-/* 오른쪽 이미지 */
+
 .poster-right {
   flex: 0 0 40%;
-  max-width: 650px;      /* ← 너 스샷 크기 기준 */
+  max-width: 650px;  
 }
 
 .poster-right img {
@@ -679,6 +670,7 @@ header .common-frame{
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 .posters>p {
@@ -699,21 +691,21 @@ header .common-frame{
   box-sizing: border-box;
 }
 
-/* 큰 헤더 */
 .banner-header h2 {
   font-family: "Satoshi", sans-serif;
   font-size: 4rem;
   font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
 .banner-header p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #555;
   margin-top: 0.5rem;
   line-height: 1.6;
 }
 
-/* 브랜드명 + 번호 정렬 */
+
 .banner-top {
   display: flex;
   justify-content: space-between;
@@ -728,7 +720,7 @@ header .common-frame{
   color: #3d4a8a;
   margin: 0;
   padding: 0;
-  line-height: 1;     /* ← 필수 */
+  line-height: 1;    
   display: block;
 }
 
@@ -740,16 +732,16 @@ header .common-frame{
   color: #3d4a8a;
 }
 
-/* 배너 이미지 */
+
 .banner-img-wrap {
   width: 100%;
   display: flex;
-  justify-content: flex-end;   /* 🔥 이미지 오른쪽 정렬 */
+  justify-content: flex-end;  
   margin-top: 1rem;
 }
 
 
-/* 설명 영역 */
+
 
 .banner-desc h4 {
   width: 40%;
@@ -770,37 +762,37 @@ header .common-frame{
 }
 .banner-content {
   display: flex;
-  flex-direction: column;  /* 위→아래 배치 */
-  align-items: flex-end;    /* 🔥 오른쪽으로 정렬 */
+  flex-direction: column;  
+  align-items: flex-end;   
   width: 100%;
 }
 
 
-/* 아래 텍스트 */
+
 .banner-desc {
-  width: 90%;               /* 🔥 배너랑 정확히 줄 맞춤 */
-  text-align: left;         /* 왼쪽 정렬 */
+  width: 90%;           
+  text-align: left;        
   margin-top: 1rem;
 }
 .banner-img-wrap {
   width: 90%;
-  margin: 1rem 0 0 auto;  /* 왼쪽 여백 / 오른쪽 붙이기 */
-  display: block;         /* flex 필요 없음 */
+  margin: 1rem 0 0 auto;  
+  display: block;         
 }
 
-/* Swiper는 랩을 꽉 채움 */
+
 .myBannerSwiper {
   width: 100%;
 }
 
-/* 슬라이드/이미지: 랩 기준으로 꽉 채우기 */
+
 .myBannerSwiper .swiper-slide {
   width: 100%;
 }
 
 .myBannerSwiper .swiper-slide img {
-  width: 100%;   /* 파란 랩 안 가로 100% */
-  height: auto;  /* 비율 유지 (잘림 최소화) */
+  width: 100%;   
+  height: auto; 
   display: block;
 }
 .banner-bg {
@@ -823,10 +815,12 @@ header .common-frame{
     font-weight: 700;
     line-height: 1.1;
     padding: 0 3rem;
+      letter-spacing: -0.04;
+  text-transform: uppercase;
     
 }
 .project p{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #555;
     margin-top: 0.8rem;
     line-height: 1.6;
@@ -843,15 +837,16 @@ header .common-frame{
   padding: 0 3rem;
   margin-bottom: 3rem;
  }
- .project-sticky-menu a{
-  display: block;
-  background-color: #000000cb;
-  backdrop-filter: blur(10px);
-  color: #fff;
-  padding: 1rem 2.4rem;
-  text-decoration: none;
-  
- }
+.project-sticky-menu a {
+    display: block;
+    background-color: #000000cb;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 0.5rem 1.3rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    
+}
  .project-sticky-menu a:hover{
   background-color: #454545;
  }
@@ -866,4 +861,121 @@ header .common-frame{
   object-fit: contain;
   margin-bottom: 3rem;
 }
+.sub-projects {
+  padding: 3rem 3rem;
+  background: #ffffff;
+  font-family: "Satoshi", sans-serif;
+}
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding-top: 3rem;
+}
+
+.sub-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-num {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  display: block;
+}
+
+.sub-card h3 {
+      font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #00000020;
+}
+
+.sub-img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+
+.sub-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sub-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #191917;
+  font-family: "Pretendard";
+  font-weight: 300;
+}
+.sub-projects{
+  margin-bottom: 3rem;
+}
+.sub-card .sub-img img {
+  transition: transform 0.3s ease;
+}
+
+.sub-card .sub-img:hover img {
+  transform: scale(1.05);
+}
+.thankyou {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.ty-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.ty-inner {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ty-inner h1 {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 800;
+  font-size: 4.5rem;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.ty-sub {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 4rem;
+  letter-spacing: -0.2px;
+}
+
+.ty-name {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
 

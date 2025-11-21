@@ -74,7 +74,7 @@
     width: 100%;
   }
 
-  /* 사진 */
+
   .about-photo {
     width: 100%;
     max-width: 360px;
@@ -87,7 +87,7 @@
     margin-top: 3rem;
   }
 
-  /* ABOUT ME 제목 */
+
   .about-title {
     position: absolute;
     top: -6%;
@@ -100,7 +100,7 @@
     z-index: 2;
   }
 
-  /* 소개문 */
+
   .about-text {
     text-align: center;
     margin-top: 0.5rem;
@@ -112,7 +112,7 @@
     line-height: 1.65;
   }
 
-  /* 프로필 정보 */
+
   .profile-info {
     width: 100%;
     margin: 1.5rem 0;
@@ -138,7 +138,7 @@
     text-align: right;
   }
 
-  /* 자격증 리스트 전체 영역 */
+
   .about-right {
     width: 100%;
     margin-top: 2rem;
@@ -150,7 +150,7 @@
     margin: 0 auto;
   }
 
-  /* 🔥 768 전용 리스트 레이아웃 */
+ 
   .about-list li{
     display: grid !important;
     grid-template-columns: 4rem 2fr 1fr !important;
@@ -158,7 +158,7 @@
     column-gap: 1.2rem;
     row-gap: 0.4rem;
 
-    /* 🔥 기존 PC 레이아웃 흔적 완전 삭제 */
+ 
     justify-content: unset !important;
     align-items: unset !important;
     text-align: left !important;
@@ -189,8 +189,14 @@
     text-align: left;
   }
   .skills {
-    padding: 3rem 1.5rem;
+    padding: 3rem 1rem;
   }
+  .popup-section {
+    padding: 3rem 1rem;
+    background: #191917;
+    color: #fff;
+    font-family: "Pretendard", sans-serif;
+}
 
   .skills-grid {
     grid-template-columns: 1fr;
@@ -217,12 +223,12 @@
     height: 260px;
   }
 
-  /* gap 더 축소 */
+
   .popup-track {
     gap: 2rem;
   }
 
-  /* 지그재그 더 축소 */
+
   .popup-item:nth-child(odd) {
     margin-top: -4rem;
   }
@@ -246,13 +252,11 @@
   transform: translate(-50%, -50%);
   font-size: 9rem;
 }
-   /* .popup-track {
-        animation-duration: 16s !important;
-    } */
+
     .poster-wrap {
     flex-direction: column;
     padding: 0 1rem 3rem 1rem;
-    height: auto !important;   /* ← 여백 개판나는 원인 해결 */
+    height: auto !important;   
     gap: 2rem;
   }
 .posters {
@@ -271,7 +275,7 @@
     width: 100%;
   }
 
-  /* 🔥 작대기 제거 */
+
   .poster-line {
     display: none;
   }
@@ -289,7 +293,7 @@
     line-height: 1.6;
   }
 
-  /* 이미지 */
+
 
   .poster-right img {
     width: 100%;
@@ -309,7 +313,6 @@
 }
 .banner-img-wrap {
     width: 100%;
-    /* margin: 1rem 0 0 auto; */
     display: block;
 }
 .banner-num {
@@ -387,12 +390,29 @@
 .project p {
     padding: 0 1rem;
 }
+.sub-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+    gap: 2rem;
+}
+.sub-projects{
+  padding: 3rem 1rem;
+}
+ .ty-inner h1 {
+    font-size: 2.5rem;
+  }
+  .ty-sub {
+    font-size: 0.8rem;
+  }
+  .about {
+    padding: 6rem 1rem !important;
+}
 }
 
 
 @media (max-width: 400px) {
 .about-inner {
-    padding: 0; /* ✅ 좌우 1rem 여백 확보 */
+    padding: 0; 
     box-sizing: border-box;
   }
 
@@ -411,7 +431,7 @@
     top: -4%;
     left: 50%;
     transform: translateX(-50%);
-    right: auto; /* 🔥 기존 right:-80% 제거 */
+    right: auto;
   }
 
   .about-text {
@@ -435,9 +455,9 @@
     margin-top: 0.2rem;
   }
   .swiper-slide {
-    width: 70vw !important;       /* 전체 비율 조금 더 줄임 */
-    max-width: 260px;             /* 강제 상한 축소 */
-    min-width: 180px;             /* 최소폭 낮춰서 작아지게 */
+    width: 70vw !important;   
+    max-width: 260px;            
+    min-width: 180px;            
   }
 
   .popup-prev,

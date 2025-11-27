@@ -873,7 +873,16 @@ header .common-frame{
   gap: 4rem;
   padding-top: 3rem;
 }
-
+.detail-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding-top: 3rem;
+}
+.detailpage{
+  background-color: #f5f5f5 ;
+  margin-bottom: 0 !important;
+}
 .sub-card {
   display: flex;
   flex-direction: column;
@@ -977,5 +986,52 @@ min-width: 100%;
   opacity: 0.9;
   letter-spacing: 0.5px;
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
 
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  width: 30%;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  padding-top: 0;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+.modal-body{
+  font-family: "Satoshi", sans-serif;
+}
 

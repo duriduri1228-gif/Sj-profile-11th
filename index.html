@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="./css/common.css?v=4">
     <link rel="stylesheet" href="./css/font.css?v=3">
     <link rel="stylesheet" href="./css/reset.css?v=3">
-    <link rel="stylesheet" href="./css/style-1920.css?v=4">
-    <link rel="stylesheet" href="./css/style-1200.css?v=4">
-    <link rel="stylesheet" href="./css/style-1024.css?v=4">
-    <link rel="stylesheet" href="./css/style-768.css?v=7">
+    <link rel="stylesheet" href="./css/style-1920.css?v=5">
+    <link rel="stylesheet" href="./css/style-1200.css?v=5">
+    <link rel="stylesheet" href="./css/style-1024.css?v=5">
+    <link rel="stylesheet" href="./css/style-768.css?v=8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- header js -->
      <script src="./js/header.js"></script>
@@ -38,6 +38,7 @@
         <li><a href="#skillss">Skill</a></li>
         <li><a href="#poppop">Popups</a></li>
         <li><a href="#pospos">Posters</a></li>
+        <li><a href="#detail">Detail</a></li>
         <li><a href="#bannerb">Banners</a></li>
         <li><a href="#propro">Projects</a></li>
         <li><a href="#spro">Visual Concept Work</a></li>
@@ -57,6 +58,7 @@
         <li><a href="#skillss">Skill</a></li>
         <li><a href="#poppop">Popups</a></li>
         <li><a href="#pospos">Posters</a></li>
+        <li><a href="#detail">Detail</a></li>
         <li><a href="#bannerb">Banners</a></li>
         <li><a href="#propro">Projects</a></li>
         <li><a href="#spro">Visual Concept Work</a></li>
@@ -609,6 +611,133 @@ window.addEventListener('resize', () => {
       }
     }
   });
+</script>
+<section class="sub-projects detailpage" id="detail">
+  <div class="skills-header detail-header">
+    <h2 class="skills-title bbyong-left detail-title">product<br>detail page</h2>
+    <p class="skills-sub bbyong-right detail-sub">디자인을 벤치마킹한 후 무드에 어울리도록
+테마에 맞춰서 상세페이지 디자인을 제작했습니다</p>
+  </div>
+  <div class="sub-grid detail-grid" >
+
+ 
+    <div class="sub-card bbyong detail-card">
+      <span class="sub-num detail-num">01</span>
+      <h3>Chair</h3>
+      <div class="sub-img detail-img">
+        <a href="#" data-full="./img/의자-상세페이지.jpg">
+        <img src="./img/상세1.jpg" alt="의자 상세페이지">
+        </a>
+      </div>
+      <p class="sub-desc detail-desc">
+        편안함과 실사용 경험을 강조하기 위해 밝고 자연스러운 공간 연출을 사용했습니다.
+기능별 디테일 컷을 구분된 섹션으로 배치해 이해도를 높이고,
+실제 환경 이미지로 신뢰감을 강화했습니다.
+      </p>
+    </div>
+
+
+    <div class="sub-card bbyong detail-card">
+      <span class="sub-num detail-num">02</span>
+      <h3>Lotion</h3>
+      <div class="sub-img detail-img">
+        <a href="#" data-full="./img/로션-상세페이지.jpg">
+        <img src="./img/상세2.jpg" alt="화장품 상세페이지">
+        </a>
+      </div>
+      <p class="sub-desc detail-desc">
+        자연스러운 분위기와 제품의 순한 이미지를 강조하기 위해
+따뜻한 톤과 넉넉한 여백을 중심으로 화면을 구성했습니다.
+성분과 효능 정보를 섹션별로 구분해 읽는 흐름을 안정적으로 설계했습니다.
+      </p>
+    </div>
+
+   
+    <div class="sub-card bbyong detail-card">
+      <span class="sub-num detail-num">03</span>
+      <h3>Headphones</h3>
+      <div class="sub-img detail-img">
+        <a href="#" data-full="./img/상세페이지1.jpg">
+        <img src="./img/상세3.jpg" alt="헤드셋 상세페이지">
+        </a>
+      </div>
+      <p class="sub-desc detail-desc">
+        제품의 고급스러운 분위기를 전달하기 위해 차분한 브라운 톤과
+제품 중심의 심플한 레이아웃으로 집중도를 높였습니다.
+기능 소개–착용 장면–제품 구성 순으로 자연스럽게 이어지는 흐름을 설계했습니다.
+      </p>
+    </div>
+
+  </div>
+</section>
+<div id="detailModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modalImg" src="" alt="">
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('detailModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.modal .close');
+
+  // 썸네일 클릭 시 모달 열기
+  document.querySelectorAll('.sub-img a').forEach(link => {
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      modal.style.display = 'block';
+      modalImg.src = link.dataset.full; // data-full에서 원본 이미지 불러오기
+    });
+  });
+
+  // 닫기 버튼
+  closeBtn.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  // 모달 바깥 클릭 시 닫기
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+});
+</script>
+
+
+
+<script>
+// 모달 요소
+const modal = document.getElementById('detailModal');
+const modalImg = document.getElementById('modalImg');
+const modalTitle = document.getElementById('modalTitle');
+const modalDesc = document.getElementById('modalDesc');
+const closeBtn = document.querySelector('.modal .close');
+
+// 이미지 클릭 이벤트
+document.querySelectorAll('.sub-img a').forEach(link => {
+  link.addEventListener('click', function(e){
+    e.preventDefault();
+    const card = link.closest('.sub-card');
+    modal.style.display = 'block';
+    modalImg.src = card.querySelector('img').src;
+    modalTitle.textContent = card.querySelector('h3').textContent;
+    modalDesc.textContent = card.querySelector('.sub-desc').textContent;
+  });
+});
+
+// 닫기 버튼
+closeBtn.onclick = function() {
+  modal.style.display = 'none';
+}
+
+// 모달 바깥 클릭 시 닫기
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
 </script>
 <section class="banner-section" id="bannerb">
   <!-- 상단 제목 -->

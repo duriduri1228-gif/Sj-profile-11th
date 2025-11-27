@@ -328,6 +328,16 @@
  .ty-inner h1 {
     font-size: 3.5rem;
   }
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 1rem;
+    width: 40%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    padding-top: 0;
+}
 }
 @media (max-width: 900px) {
   .about{
